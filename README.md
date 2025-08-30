@@ -18,10 +18,6 @@ Project Prakriti is built on a foundation of IBM's open-source technologies and 
 2.  **Biodiversity Strategist Agent**: Identifies key native and endangered species by querying a knowledge base.
 3.  **Restoration Planner Agent**: Synthesizes all inputs to generate a comprehensive, actionable restoration plan.
 
-**High-Level Architecture:**
-*(You can place the architecture diagram you create here)*
-![Project Prakriti Architecture](./assets/architecture-diagram.png) <!-- Link to your image -->
-
 ##  Built With
 
 *   **Programming Language:** Python
