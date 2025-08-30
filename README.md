@@ -1,6 +1,8 @@
 #### Project-Prakriti
 # Project Prakriti: An Agentic AI Framework for Precision Ecological Restoration 
-https://colab.research.google.com/drive/1cV81tidzHMwB_YqyR3dDwRZDaOyFhhxO?usp=sharing
+https://colab.research.google.com/drive/10rqoeq2yZrB8UnWL0KRtqIECCGVAgWy1?usp=sharing  (IBM's Granite Model)
+
+https://colab.research.google.com/drive/1cV81tidzHMwB_YqyR3dDwRZDaOyFhhxO?usp=sharing   (tiiuae/falcon-rw-1b Model)
 [![Hackathon](https://img.shields.io/badge/India-AI%20Impact%20Hackathon-orange.svg)](https://iisc-ibm-india-ai-impact.devpost.com/)
 
 ##  Overview
