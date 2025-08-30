@@ -1,37 +1,4 @@
-+-------------------+     +-----------------------------+
-|                   |     | KNOWLEDGE BASE              |
-|  CLIMATE API      |     | (Vector DB with             |
-| (e.g., IMD, NASA) +-----> ISFR Reports, Species Data) |
-|                   |     |                             |
-+-------------------+     +-------------+---------------+
-          ^                             ^
-          |                             |
-+---------+---------+       +-----------+-----------+
-| Climate Analyst   |       | Biodiversity Strategist|
-| Agent             |       | Agent                 |
-| (IBM Granite-7B + ADK)    | (IBM Granite-7B + ADK) |
-+---------+---------+       +-----------+-----------+
-          ^                             ^
-          |                             |
-          +--------------+--------------+
-                         |
-                         v
-               +---------+---------+
-               | Restoration Planner|
-               | Agent             |
-               | (IBM Granite-7B + ADK) |
-               +---------+---------+
-                         |
-                         v
-               +---------+---------+
-               | STRUCTURED PLAN   |
-               | (JSON / PDF)      |
-               +-------------------+
-
-
-
-
-# Project-Prakriti
+#### Project-Prakriti
 # Project Prakriti: An Agentic AI Framework for Precision Ecological Restoration
 
 [![Built with IBM ADK](https://img.shields.io/badge/Built%20with-IBM%20ADK-blue.svg)](https://github.com/IBM/agent-development-kit)
