@@ -1,7 +1,6 @@
 #### Project-Prakriti
 # Project Prakriti: An Agentic AI Framework for Precision Ecological Restoration 
-
-[![Built with IBM ADK](https://img.shields.io/badge/Built%20with-IBM%20ADK-blue.svg)](https://github.com/IBM/agent-development-kit)
+https://colab.research.google.com/drive/1cV81tidzHMwB_YqyR3dDwRZDaOyFhhxO?usp=sharing
 [![Hackathon](https://img.shields.io/badge/India-AI%20Impact%20Hackathon-orange.svg)](https://iisc-ibm-india-ai-impact.devpost.com/)
 
 ##  Overview
