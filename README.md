@@ -41,7 +41,7 @@ This repository contains an initial proof-of-concept (PoC) built with a non-IBM 
 
 1.  **Clone the repo**
     ```bash
-    git clone https://github.com/YOUR_USERNAME/project-prakriti.git
+    git clone https://github.com/Kumarharsh1/project-prakriti.git
     cd project-prakriti
     ```
 
