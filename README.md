@@ -60,41 +60,49 @@ This repository contains an initial proof-of-concept (PoC) built with a non-IBM 
 The core logic of the multi-agent workflow is demonstrated in the PoC script:
 
 ```python
-# Install dependencies
-# !pip install -U transformers accelerate sentencepiece huggingface_hub
+#  Install dependencies
+!pip install -U transformers accelerate
 
-# Authenticate
+#  Authenticate with Hugging Face
 from huggingface_hub import login
-login(token="your_hf_token_here")
+login(token="your_hf_token_here")  # Replace with your actual token
 
-#  Load model and tokenizer
+#  Load IBM's Granite model
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-model_name = "meta-llama/Llama-2-7b-chat-hf"
+model_name = "ibm-granite/granite-3b-instruct"  # IBM's model for the hackathon
+
 tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
+model = AutoModelForCausalLM.from_pretrained(
+    model_name,
+    device_map="auto",
+    load_in_8bit=True,  # Optional but recommended for memory
+    torch_dtype="auto"
+)
 
-#  Agent runner function
+#  Agent runner function for Granite
 def run_agent(agent_role, task_prompt):
-    messages = [
-        {"role": "system", "content": f"You are a helpful assistant acting as a {agent_role}."},
-        {"role": "user", "content": task_prompt}
-    ]
-    inputs = tokenizer.apply_chat_template(
-        messages,
-        add_generation_prompt=True,
-        return_tensors="pt"
-    ).to(model.device)
-    outputs = model.generate(**inputs, max_new_tokens=300)
-    response = tokenizer.decode(outputs[0][inputs["input_ids"].shape[-1]:], skip_special_tokens=True)
-    return response
+    # Format the prompt for the Granite model
+    prompt = f"### System: You are an expert {agent_role}.\n\n### User: {task_prompt}\n\n### Assistant:"
+    
+    inputs = tokenizer.encode(prompt, return_tensors="pt").to(model.device)
+    
+    outputs = model.generate(
+        inputs,
+        max_new_tokens=256,
+        do_sample=True,
+        temperature=0.7,
+        top_p=0.9,
+        eos_token_id=tokenizer.eos_token_id
+    )
+    
+    response = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    # Extract only the assistant's response
+    assistant_response = response.split("### Assistant:")[-1].strip()
+    
+    return assistant_response
 
-# Define agents and tasks
-climate_output = run_agent("Climate Analyst", "Analyze rainfall changes in the Aravalli ecosystem.")
-biodiversity_output = run_agent("Biodiversity Strategist", "Identify key endangered species in the Aravallis.")
-planner_output = run_agent("Restoration Planner", f"Create a plan using:\nCLIMATE: {climate_output}\nBIO: {biodiversity_output}")
-
-print("📋 Final Restoration Plan:\n", planner_output)
+# ... [The rest of the code (agent roles, tasks, and execution) is the same as Option 1] ...
 
 
 
