@@ -99,3 +99,37 @@ biodiversity_output = run_agent("Biodiversity Strategist", "Identify key endange
 planner_output = run_agent("Restoration Planner", f"Create a plan using:\nCLIMATE: {climate_output}\nBIO: {biodiversity_output}")
 
 print("📋 Final Restoration Plan:\n", planner_output)
+
+
+
+
+
++-------------------+     +-----------------------------+
+|                   |     | KNOWLEDGE BASE              |
+|  CLIMATE API      |     | (Vector DB with             |
+| (e.g., IMD, NASA) +-----> ISFR Reports, Species Data) |
+|                   |     |                             |
++-------------------+     +-------------+---------------+
+          ^                             ^
+          |                             |
++---------+---------+       +-----------+-----------+
+| Climate Analyst   |       | Biodiversity Strategist|
+| Agent             |       | Agent                 |
+| (IBM Granite-7B + ADK)    | (IBM Granite-7B + ADK) |
++---------+---------+       +-----------+-----------+
+          ^                             ^
+          |                             |
+          +--------------+--------------+
+                         |
+                         v
+               +---------+---------+
+               | Restoration Planner|
+               | Agent             |
+               | (IBM Granite-7B + ADK) |
+               +---------+---------+
+                         |
+                         v
+               +---------+---------+
+               | STRUCTURED PLAN   |
+               | (JSON / PDF)      |
+               +-------------------+
