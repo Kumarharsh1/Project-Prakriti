@@ -70,7 +70,7 @@ login(token="your_hf_token_here")  # Replace with your actual token
 #  Load IBM's Granite model
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-model_name = "ibm-granite/granite-3b-instruct"  # IBM's model for the hackathon
+model_name = "ibm-granite/granite-3b-instruct"  
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(
@@ -102,7 +102,95 @@ def run_agent(agent_role, task_prompt):
     
     return assistant_response
 
-# ... [The rest of the code (agent roles, tasks, and execution) is the same as Option 1] ...
+#  Define agents and tasks
+climate_output = run_agent("Climate Analyst", "Analyze rainfall changes in the Aravalli ecosystem.")
+biodiversity_output = run_agent("Biodiversity Strategist", "Identify key endangered species in the Aravallis.")
+planner_output = run_agent("Restoration Planner", f"Create a plan using:\nCLIMATE: {climate_output}\nBIO: {biodiversity_output}")
+
+print(" Final Restoration Plan:\n", planner_output)
+
+
+           #####OR####
+### we can use tiiuae/falcon-rw-1b model 
+
+#  Install dependencies
+!pip install -U transformers accelerate sentencepiece
+
+#  Import and load an instruction-tuned model
+from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+
+# Using a small model designed for chatting/instructions
+model_name = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+
+# Load tokenizer and model
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(
+    model_name,
+    device_map="auto",  # Automatically uses GPU if available
+    load_in_8bit=True,  # Reduces memory usage (may require `bitsandbytes`)
+    torch_dtype="auto"   # Automatically handles data type
+)
+
+# Create a text generation pipeline
+generator = pipeline(
+    "text-generation",
+    model=model,
+    tokenizer=tokenizer,
+)
+
+#  Agent runner function using a proper chat template
+def run_agent(agent_role, task_prompt):
+    # Format the prompt correctly for a chat model
+    messages = [
+        {"role": "system", "content": f"You are an expert {agent_role}. Provide a concise and helpful answer."},
+        {"role": "user", "content": task_prompt}
+    ]
+    
+    # Apply the chat template to format the prompt correctly
+    prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    
+    # Generate the response
+    outputs = generator(
+        prompt,
+        max_new_tokens=256,
+        do_sample=True,
+        temperature=0.7,
+        top_k=50,
+        top_p=0.95,
+        eos_token_id=tokenizer.eos_token_id
+    )
+    
+    # Extract only the assistant's response
+    full_response = outputs[0]['generated_text']
+    # The response includes the original prompt, so we split it to get only the new part
+    assistant_response = full_response.split("assistant\n")[-1].strip()
+    
+    return assistant_response
+
+#  Agent roles
+climate_agent = "Climate Analyst"
+biodiversity_agent = "Biodiversity Strategist"
+planner_agent = "Restoration Planner"
+
+#  Tasks
+climate_task = "Analyze recent rainfall and temperature changes in the dry forest ecosystem of the Aravalli range in India."
+biodiversity_task = "Identify key endangered species and biodiversity threats in the dry forests of the Aravalli range."
+planner_task = "Propose a detailed restoration plan for the Aravalli forest ecosystem."
+
+#  Run agents
+print("Running Climate Agent...")
+climate_output = run_agent(climate_agent, climate_task)
+print(" Climate Agent:\n", climate_output, "\n" + "="*50 + "\n")
+
+print("Running Biodiversity Agent...")
+biodiversity_output = run_agent(biodiversity_agent, biodiversity_task)
+print(" Biodiversity Agent:\n", biodiversity_output, "\n" + "="*50 + "\n")
+
+#  Feed outputs into planner
+print("Running Restoration Planner...")
+planner_task += f"\n\nCLIMATE ANALYSIS: {climate_output}\n\nBIODIVERSITY ASSESSMENT: {biodiversity_output}"
+planner_output = run_agent(planner_agent, planner_task)
+print(" Restoration Planner:\n", planner_output)
 
 
 
