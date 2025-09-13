@@ -1,85 +1,98 @@
-#  Project Prakriti  
+![Project Prakriti](https://img.shields.io/badge/Project-Prakriti-green)
+![AI Agents](https://img.shields.io/badge/Multi--Agent-System-blue)
+![Climate Analysis](https://img.shields.io/badge/Climate-Analysis-orange)
+![Biodiversity](https://img.shields.io/badge/Biodiversity-Assessment-brightgreen)
 
-**Project Prakriti** is a multi-agent AI system for **climate analysis, biodiversity assessment, and ecological restoration planning**.  
-It integrates **Groq API** and **IBM WatsonX API** to generate expert insights, and provides rich **visualizations** to track ecological restoration impacts.  
+**Project Prakriti** is an advanced multi-agent AI system designed for comprehensive climate analysis, biodiversity assessment, and ecological restoration planning. By integrating **Groq API** and **IBM WatsonX API**, it generates expert insights and provides rich visualizations to track ecological restoration impacts.
 
----
-##  Working
+## 🌟 Key Features
+
+- **Multi-Agent Workflow**
+  - **Climate Analyst Agent** → Analyzes rainfall patterns, temperature trends, and climate risks
+  - **Biodiversity Strategist Agent** → Evaluates species status, threats, and conservation opportunities
+  - **Restoration Planner Agent** → Generates detailed restoration plans with native species recommendations and monitoring schedules
+
+- **Comprehensive Visualizations**
+  - Biodiversity improvement bar charts
+  - Rainfall trend comparison line charts
+  - Native species distribution pie charts
+  - Forest cover before/after restoration scatter plots
+  - Regional forest cover change heatmaps
+
+- **Resilient API Architecture**
+  - Primary: **Groq API** for high-performance inference
+  - Fallback: **IBM WatsonX API** for reliable backup processing
+
+## 🏗️ System Architecture
+
++-------------------+     +-----------------------------+
+|                   |     | KNOWLEDGE BASE              |
+|  CLIMATE API      |     | (Vector DB with             |
+| (e.g., IMD, NASA) +-----> ISFR Reports, Species Data) |
+|                   |     |                             |
++-------------------+     +-------------+---------------+
+          ^                             ^
+          |                             |
++---------+---------+       +-----------+-----------+
+| Climate Analyst   |       | Biodiversity Strategist|
+| Agent             |       | Agent                 |
+| (IBM Granite-7B + ADK)    | (IBM Granite-7B + ADK) |
++---------+---------+       +-----------+-----------+
+          ^                             ^
+          |                             |
+          +--------------+--------------+
+                         |
+                         v
+               +---------+---------+
+               | Restoration Planner|
+               | Agent             |
+               | (IBM Granite-7B + ADK) |
+               +---------+---------+
+                         |
+                         v
+               +---------+---------+
+               | STRUCTURED PLAN   |
+               | (JSON / PDF)      |
+               +-------------------+
+
+
+
+## 🛠️ Tech Stack
+
+- **Language:** Python 3.11+
+- **APIs:** Groq, IBM WatsonX
+- **Libraries:**
+  - `requests` → API calls
+  - `pandas`, `numpy` → data handling
+  - `matplotlib`, `seaborn` → data visualization
+  - `json`, `csv` → data processing
+
+## 📦 Installation
 
 ```bash
-# Clone repo
+# Clone the repository
 git clone https://github.com/your-username/project-prakriti.git
 cd project-prakriti
 
 # Install dependencies
 pip install -r requirements.txt
 
-##  Features  
-
--  **Multi-Agent Workflow**  
-  - **Climate Agent** → Analyzes rainfall, temperature, and risks.  
-  - **Biodiversity Agent** → Evaluates species status, threats, and opportunities.  
-  - **Restoration Agent** → Generates restoration plans (native species, planting schedule, monitoring).  
-
--  **Visualizations**  
-  - Bar chart → Biodiversity improvement  
-  - Line chart → Rainfall trend comparison  
-  - Pie chart → Native species distribution  
-  - Scatter plot → Forest cover before vs after restoration  
-  - Heatmap → Forest cover change across regions  
-
--  **Resilient API Calls**  
-  - Primary: **Groq API**  
-  - Fallback: **IBM WatsonX API**  
-
----
-
-##  Tech Stack  
-
-- **Language:** Python 3.11+  
-- **APIs:** Groq, IBM WatsonX  
-- **Libraries:**  
-  - `requests` → API calls  
-  - `pandas`, `numpy` → data handling  
-  - `matplotlib`, `seaborn` → data visualization  
-
----
-
-##  How It Works  
-
-1. **Select a region** (e.g., Madhya Pradesh, Maharashtra, Karnataka).  
-2. **Climate Agent** generates insights on rainfall, temperature, risks.  
-3. **Biodiversity Agent** uses climate analysis to assess species and threats.  
-4. **Restoration Agent** combines both to propose a restoration plan.  
-5. **Visualizations** show before/after comparisons of biodiversity and forest cover.  
-
----
-
-##  Sample Visualizations  
-
-- **Biodiversity Improvement**  
-  ![biodiversity_chart](docs/biodiversity.png)  
-
-- **Forest Cover Change (Heatmap)**  
-  ![heatmap_chart](docs/heatmap.png)  
-
----
-
-
-
-##  Run the Project
+▶️ Run the Project
 python prakriti.py
 
-## Future Enhancements
+🔮 Future Enhancements
+Integrate NASA MODIS NDVI dataset for real vegetation greenness
+Use live climate APIs instead of static inputs
+Add GIS-based maps for restoration zones
+Build a community portal for citizen participation
 
- Integrate NASA MODIS NDVI dataset for real vegetation greenness.
+👨‍💻 Contributors
+Kumar Harsh → Lead Developer & Researcher
 
- Use live climate APIs instead of static inputs.
 
- Add GIS-based maps for restoration zones.
 
- Build a community portal for citizen participation.
 
-## Contributors
 
-## Kumar Harsh (Lead Developer & Researcher)
+
+
+
