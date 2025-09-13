@@ -1,30 +1,23 @@
-![Project Prakriti](https://img.shields.io/badge/Project-Prakriti-green)
-![AI Agents](https://img.shields.io/badge/Multi--Agent-System-blue)
-![Climate Analysis](https://img.shields.io/badge/Climate-Analysis-orange)
-![Biodiversity](https://img.shields.io/badge/Biodiversity-Assessment-brightgreen)
+# Project Prakriti: An Agentic AI Framework for Precision Ecological Restoration
 
-**Project Prakriti** is an advanced multi-agent AI system designed for comprehensive climate analysis, biodiversity assessment, and ecological restoration planning. By integrating **Groq API** and **IBM WatsonX API**, it generates expert insights and provides rich visualizations to track ecological restoration impacts.
+[![Built with IBM ADK](https://img.shields.io/badge/Built%20with-IBM%20ADK-blue.svg)](https://github.com/IBM/agent-development-kit)
+[![Hackathon](https://img.shields.io/badge/India-AI%20Impact%20Hackathon-orange.svg)](https://iisc-ibm-india-ai-impact.devpost.com/)
 
-## 🌟 Key Features
+## 🌿 Overview
 
-- **Multi-Agent Workflow**
-  - **Climate Analyst Agent** → Analyzes rainfall patterns, temperature trends, and climate risks
-  - **Biodiversity Strategist Agent** → Evaluates species status, threats, and conservation opportunities
-  - **Restoration Planner Agent** → Generates detailed restoration plans with native species recommendations and monitoring schedules
+Project Prakriti is a proof-of-concept for a multi-agent AI system designed to automate the creation of data-driven ecological restoration plans tailored for India's unique ecosystems. It leverages the power of Agentic AI, where specialized models collaborate like a team of experts to tackle the complex problem of land degradation and biodiversity loss.
 
-- **Comprehensive Visualizations**
-  - Biodiversity improvement bar charts
-  - Rainfall trend comparison line charts
-  - Native species distribution pie charts
-  - Forest cover before/after restoration scatter plots
-  - Regional forest cover change heatmaps
+This project was developed as a proposal for the **India AI Impact Generative AI Hackathon** (Track 3: Agentic AI).
 
-- **Resilient API Architecture**
-  - Primary: **Groq API** for high-performance inference
-  - Fallback: **IBM WatsonX API** for reliable backup processing
+## 🤖 Architecture
 
-## 🏗️ System Architecture
+Project Prakriti is built on a foundation of IBM's open-source technologies and follows a multi-agent workflow:
 
+1.  **Climate Analyst Agent**: Analyzes historical climate data for a target region.
+2.  **Biodiversity Strategist Agent**: Identifies key native and endangered species by querying a knowledge base.
+3.  **Restoration Planner Agent**: Synthesizes all inputs to generate a comprehensive, actionable restoration plan.
+
+**High-Level Architecture:**
 +-------------------+     +-----------------------------+
 |                   |     | KNOWLEDGE BASE              |
 |  CLIMATE API      |     | (Vector DB with             |
@@ -55,44 +48,80 @@
                | (JSON / PDF)      |
                +-------------------+
 
+## 🛠️ Built With
 
+*   **Programming Language:** Python
+*   **Framework & Orchestration:** IBM Agent Development Kit (ADK)
+*   **Foundation Models:** IBM Granite-7B-Instruct
+*   **Libraries:** Hugging Face Transformers, LangChain
+*   **Knowledge Management:** ChromaDB (Vector Database)
+*   **Data Sources:** Indian Meteorological Department (IMD), Indian State of Forest Report (ISFR)
 
-## 🛠️ Tech Stack
+## 🚀 Getting Started (Proof of Concept)
 
-- **Language:** Python 3.11+
-- **APIs:** Groq, IBM WatsonX
-- **Libraries:**
-  - `requests` → API calls
-  - `pandas`, `numpy` → data handling
-  - `matplotlib`, `seaborn` → data visualization
-  - `json`, `csv` → data processing
+This repository contains an initial proof-of-concept (PoC) built with a non-IBM model to demonstrate the core multi-agent concept. The final implementation will migrate to the full IBM tech stack on Kaggle.
 
-## 📦 Installation
+### Prerequisites
 
-```bash
-# Clone the repository
-git clone https://github.com/your-username/project-prakriti.git
-cd project-prakriti
+*   Python 3.8+
+*   A Hugging Face account and access token (for model access)
+*   `pip`
 
-# Install dependencies
-pip install -r requirements.txt
+### Installation & Run
 
-▶️ Run the Project
-python prakriti.py
+1.  **Clone the repo**
+    ```bash
+    git clone https://github.com/YOUR_USERNAME/project-prakriti.git
+    cd project-prakriti
+    ```
 
-🔮 Future Enhancements
-Integrate NASA MODIS NDVI dataset for real vegetation greenness
-Use live climate APIs instead of static inputs
-Add GIS-based maps for restoration zones
-Build a community portal for citizen participation
+2.  **Install dependencies**
+    ```bash
+    pip install -U transformers accelerate sentencepiece huggingface_hub
+    ```
 
-👨‍💻 Contributors
-Kumar Harsh → Lead Developer & Researcher
+3.  **Run the PoC script**
+    ```bash
+    python poc_agentic_workflow.py
+    ```
 
+### Proof of Concept Code
 
+The core logic of the multi-agent workflow is demonstrated in the PoC script:
 
+```python
+# 📦 Install dependencies
+# !pip install -U transformers accelerate sentencepiece huggingface_hub
 
+# 🔐 Authenticate
+from huggingface_hub import login
+login(token="your_hf_token_here")
 
+# 🚀 Load model and tokenizer
+from transformers import AutoTokenizer, AutoModelForCausalLM
 
+model_name = "meta-llama/Llama-2-7b-chat-hf"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
 
+# 🧠 Agent runner function
+def run_agent(agent_role, task_prompt):
+    messages = [
+        {"role": "system", "content": f"You are a helpful assistant acting as a {agent_role}."},
+        {"role": "user", "content": task_prompt}
+    ]
+    inputs = tokenizer.apply_chat_template(
+        messages,
+        add_generation_prompt=True,
+        return_tensors="pt"
+    ).to(model.device)
+    outputs = model.generate(**inputs, max_new_tokens=300)
+    response = tokenizer.decode(outputs[0][inputs["input_ids"].shape[-1]:], skip_special_tokens=True)
+    return response
 
+# 🧑‍🔬 Define agents and tasks
+climate_output = run_agent("Climate Analyst", "Analyze rainfall changes in the Aravalli ecosystem.")
+biodiversity_output = run_agent("Biodiversity Strategist", "Identify key endangered species in the Aravallis.")
+planner_output = run_agent("Restoration Planner", f"Create a plan using:\nCLIMATE: {climate_output}\nBIO: {biodiversity_output}")
+
+print("📋 Final Restoration Plan:\n", planner_output)
