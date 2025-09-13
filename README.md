@@ -59,12 +59,12 @@ Project Prakriti is built on a foundation of IBM's open-source technologies and 
 - **Language:** Python 3.11+
 - **APIs:** Groq, IBM WatsonX
 - **Libraries:**
-  - `requests` → API calls
-  - `pandas`, `numpy` → data handling
-  - `matplotlib`, `seaborn` → data visualization
-  - `json`, `csv` → data processing
+  * `requests` → API calls
+  * `pandas`, `numpy` → data handling
+  * `matplotlib`, `seaborn` → data visualization
+  * `json`, `csv` → data processing
 
-##  ***Installation & Setup***
+##  **Installation & Setup**
 
 #### **Clone the repository**
 git clone https://github.com/your-username/project-prakriti.git
@@ -89,22 +89,21 @@ cp .env.example .env
 * **Biodiversity Strategist Agent** → Evaluates species status, threats, and conservation opportunities
 * **Restoration Planner Agent** → Generates detailed restoration plans with native species recommendations and monitoring schedules
 
-- **Comprehensive Visualizations**
-  * Biodiversity improvement bar charts
-  * Rainfall trend comparison line charts
-  *  Native species distribution pie charts
-  * Forest cover before/after restoration scatter plots
-  * Regional forest cover change heatmaps
+**Comprehensive Visualizations**
+* Biodiversity improvement bar charts
+* Rainfall trend comparison line charts
+*  Native species distribution pie charts
+* Forest cover before/after restoration scatter plots
+* Regional forest cover change heatmaps
 
-- **Resilient API Architecture**
-  * Primary: **Groq API** for high-performance inference
-  * Fallback: **IBM WatsonX API** for reliable backup processing
+**Resilient API Architecture**
+* Primary: **Groq API** for high-performance inference
+* Fallback: **IBM WatsonX API** for reliable backup processing
 
-## Run the main application
+## **Run the main application**
 python prakriti.py
 
 ## **Select a region (e.g., Madhya Pradesh, Maharashtra, Karnataka)**
-
 * Climate Agent generates insights on rainfall, temperature, and climate risks
 * Biodiversity Agent uses climate analysis to assess species status and threats
 * Restoration Agent combines insights to propose a comprehensive restoration plan
@@ -116,20 +115,16 @@ python prakriti.py
 * Average Rainfall: 1200 mm/year
 * Temperature Range: 18°C - 35°C
 * Identified Risks: Soil erosion, water scarcity
-
 ### Biodiversity Assessment:
 * Native Species: 45 identified
 * Endangered Species: 12 need protection
 * Conservation Opportunities: 8 zones identified
-
- ### Restoration Plan Generated:
+### Restoration Plan Generated:
 * Recommended Species: 15 native varieties
 * Planting Schedule: Monsoon season optimal
 * Monitoring Protocol: Quarterly assessments
 
-
 ## **Future Enhancements**
-  
 * Integrate NASA MODIS NDVI dataset for real vegetation greenness
 * Use live climate APIs instead of static inputs
 * Add GIS-based maps for restoration zones
