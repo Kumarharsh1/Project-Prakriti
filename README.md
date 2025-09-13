@@ -42,7 +42,7 @@ Project Prakriti is built on a foundation of IBM's open-source technologies and 
                +---------+---------+
                | Restoration Planner|
                | Agent             |
-               | (IBM Granite-7B + ADK) |
+               | (IBM Granite-7B + ADK)|
                +---------+---------+
                          |
                          v
@@ -54,7 +54,7 @@ Project Prakriti is built on a foundation of IBM's open-source technologies and 
 </code>
 
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Language:** Python 3.11+
 - **APIs:** Groq, IBM WatsonX
@@ -64,9 +64,8 @@ Project Prakriti is built on a foundation of IBM's open-source technologies and 
   - `matplotlib`, `seaborn` → data visualization
   - `json`, `csv` → data processing
 
-## 📦 Installation & Setup
+##  Installation & Setup
 
-```bash
 # Clone the repository
 git clone https://github.com/your-username/project-prakriti.git
 cd project-prakriti
@@ -109,7 +108,7 @@ python prakriti.py --region "Madhya Pradesh"
 # Generate report only
 python prakriti.py --report-only
 
-##Select a region (e.g., Madhya Pradesh, Maharashtra, Karnataka)
+## Select a region (e.g., Madhya Pradesh, Maharashtra, Karnataka)
 
 Climate Agent generates insights on rainfall, temperature, and climate risks
 
@@ -137,31 +136,24 @@ Visualizations display before/after comparisons of biodiversity and forest cover
    - Monitoring Protocol: Quarterly assessments
 
 
-  ## Future Enhancements
-Integrate NASA MODIS NDVI dataset for real vegetation greenness
+  ### Future Enhancements
+  
+# Integrate NASA MODIS NDVI dataset for real vegetation greenness
 
-Use live climate APIs instead of static inputs
+# Use live climate APIs instead of static inputs
 
-Add GIS-based maps for restoration zones
+# Add GIS-based maps for restoration zones
 
-Build a community portal for citizen participation
+# Build a community portal for citizen participation
 
-Implement blockchain for transparent fund allocation
+# Implement blockchain for transparent fund allocation
 
-Add drone imagery analysis for progress monitoring
+# Add drone imagery analysis for progress monitoring
 
 ## Contributors
 Kumar Harsh → Lead Developer & Researcher
 
-We welcome contributors! See our contributing guidelines.
+## Project Prakriti - Harnessing AI for Ecological Restoration and Biodiversity Conservation.
 
-## License
-This project is licensed under the MIT License. See LICENSE file for details.
-
-## Contributing
-We welcome contributions! Please read our Contributing Guidelines and Code of Conduct before submitting pull requests.
-
-Project Prakriti - Harnessing AI for Ecological Restoration and Biodiversity Conservation.
-
-Together, let's build a greener future! 🌱
+## Together, let's build a greener future! 🌱
 
