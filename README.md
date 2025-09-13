@@ -54,7 +54,7 @@ Project Prakriti is built on a foundation of IBM's open-source technologies and 
                                      ``` </pre>
 
 
-##  Tech Stack
+##  **Tech Stack**
 
 - **Language:** Python 3.11+
 - **APIs:** Groq, IBM WatsonX
@@ -64,25 +64,25 @@ Project Prakriti is built on a foundation of IBM's open-source technologies and 
   - `matplotlib`, `seaborn` → data visualization
   - `json`, `csv` → data processing
 
-##  Installation & Setup
+##  ***Installation & Setup***
 
-#### Clone the repository
+#### **Clone the repository**
 git clone https://github.com/your-username/project-prakriti.git
 cd project-prakriti
 
-#### Create virtual environment
+#### **Create virtual environment**
 python -m venv prakriti-env
 source prakriti-env/bin/activate  # On Windows: prakriti-env\Scripts\activate
 
-#### Install dependencies
+#### **Install dependencies**
 pip install -r requirements.txt
 
-#### Set up environment variables
+#### **Set up environment variables**
 cp .env.example .env
 
 #### Add your API keys to the .env file
 
-## Key Features*
+## **Key Features**
 
 * **Multi-Agent Workflow**
 * **Climate Analyst Agent** → Analyzes rainfall patterns, temperature trends, and climate risks
@@ -103,23 +103,14 @@ cp .env.example .env
 ## Run the main application
 python prakriti.py
 
-## Or run with specific region
-python prakriti.py --region "Madhya Pradesh"
-
-## Generate report only
-python prakriti.py --report-only
-
-## Select a region (e.g., Madhya Pradesh, Maharashtra, Karnataka)
+## **Select a region (e.g., Madhya Pradesh, Maharashtra, Karnataka)**
 
 * Climate Agent generates insights on rainfall, temperature, and climate risks
-
 * Biodiversity Agent uses climate analysis to assess species status and threats
-
 * Restoration Agent combines insights to propose a comprehensive restoration plan
-
 * Visualizations display before/after comparisons of biodiversity and forest coverUsage
 
-## Output
+## **Output**
 
 ### Climate Analysis Complete:
 * Average Rainfall: 1200 mm/year
@@ -137,7 +128,7 @@ python prakriti.py --report-only
 * Monitoring Protocol: Quarterly assessments
 
 
-## Future Enhancements
+## **Future Enhancements**
   
 * Integrate NASA MODIS NDVI dataset for real vegetation greenness
 * Use live climate APIs instead of static inputs
@@ -146,8 +137,8 @@ python prakriti.py --report-only
 * Implement blockchain for transparent fund allocation
 * Add drone imagery analysis for progress monitoring
 
-### Contributors
+### **Contributors**
 Kumar Harsh → Lead Developer & Researcher
 
-## Together, let's build a greener future! 🌱
+## **Together, let's build a greener future! 🌱**
 
