@@ -69,16 +69,16 @@ Project Prakriti is built on a foundation of IBM's open-source technologies and 
 #### **Clone the repository**
 git clone https://github.com/your-username/project-prakriti.git
 cd project-prakriti
-
 #### **Create virtual environment**
 * python -m venv prakriti-env
 * source prakriti-env/bin/activate  # On Windows: prakriti-env\Scripts\activate
-
 #### **Install dependencies**
 * pip install -r requirements.txt
 #### **Set up environment variables**
 * cp .env.example .env
 #### Add your API keys to the .env file
+* GROQ_API_KEY=your_groq_api_key_here
+* IBM_API_KEY=your_ibm_api_key_here
 
 ## **Key Features**
 * **Multi-Agent Workflow**
