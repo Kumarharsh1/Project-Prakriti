@@ -94,6 +94,18 @@ pip install -r requirements.txt
                | STRUCTURED PLAN   |
                | (JSON / PDF)      |
                +-------------------+
+```bash
+# Run the Project
+python prakriti.py
+
+# Future Enhancements
+Integrate NASA MODIS NDVI dataset for real vegetation greenness.
+Use live climate APIs instead of static inputs.
+Add GIS-based maps for restoration zones.
+Build a community portal for citizen participation.
+
+# Contributors
+Kumar Harsh (Lead Developer & Researcher)
 
 #  Run the Project
 python prakriti.py
