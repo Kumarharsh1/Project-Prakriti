@@ -3,13 +3,13 @@
 [![Built with IBM ADK](https://img.shields.io/badge/Built%20with-IBM%20ADK-blue.svg)](https://github.com/IBM/agent-development-kit)  
 [![Hackathon](https://img.shields.io/badge/India-AI%20Impact%20Hackathon-orange.svg)](https://iisc-ibm-india-ai-impact.devpost.com/)
 
-## ** Overview**
+##  Overview
 
 **Project Prakriti** is a proof-of-concept for a multi-agent AI system designed to automate the creation of data-driven ecological restoration plans tailored for India's unique ecosystems. It leverages the power of Agentic AI, where specialized models collaborate like a team of experts to tackle the complex problem of land degradation and biodiversity loss.
 
 This project was developed as a proposal for the **India AI Impact Generative AI Hackathon** (Track 3: Agentic AI).
 
-## ** Architecture**
+##  Architecture
 
 Project Prakriti is built on a foundation of IBM's open-source technologies and follows a multi-agent workflow:
 
@@ -17,7 +17,7 @@ Project Prakriti is built on a foundation of IBM's open-source technologies and 
 2. **Biodiversity Strategist Agent**: Identifies key native and endangered species by querying a knowledge base.  
 3. **Restoration Planner Agent**: Synthesizes all inputs to generate a comprehensive, actionable restoration plan.
 
-### **High-Level Architecture**
+### High-Level Architecture
 
 <code>
           
@@ -51,7 +51,7 @@ Project Prakriti is built on a foundation of IBM's open-source technologies and 
                | (JSON / PDF)      |
                +-------------------+
 
-</code>
+                                              </code>
 
 
 ##  Tech Stack
@@ -66,38 +66,39 @@ Project Prakriti is built on a foundation of IBM's open-source technologies and 
 
 ##  Installation & Setup
 
-### Clone the repository
+#### Clone the repository
 git clone https://github.com/your-username/project-prakriti.git
 cd project-prakriti
 
-### Create virtual environment
+#### Create virtual environment
 python -m venv prakriti-env
 source prakriti-env/bin/activate  # On Windows: prakriti-env\Scripts\activate
 
-### Install dependencies
+#### Install dependencies
 pip install -r requirements.txt
 
-### Set up environment variables
+#### Set up environment variables
 cp .env.example .env
-### Add your API keys to the .env file
+
+#### Add your API keys to the .env file
 
 ## Key Features*
 
-- **Multi-Agent Workflow**
-  - **Climate Analyst Agent** → Analyzes rainfall patterns, temperature trends, and climate risks
-  - **Biodiversity Strategist Agent** → Evaluates species status, threats, and conservation opportunities
-  - **Restoration Planner Agent** → Generates detailed restoration plans with native species recommendations and monitoring schedules
+* **Multi-Agent Workflow**
+* **Climate Analyst Agent** → Analyzes rainfall patterns, temperature trends, and climate risks
+* **Biodiversity Strategist Agent** → Evaluates species status, threats, and conservation opportunities
+* **Restoration Planner Agent** → Generates detailed restoration plans with native species recommendations and monitoring schedules
 
 - **Comprehensive Visualizations**
-  - Biodiversity improvement bar charts
-  - Rainfall trend comparison line charts
-  - Native species distribution pie charts
-  - Forest cover before/after restoration scatter plots
-  - Regional forest cover change heatmaps
+  * Biodiversity improvement bar charts
+  * Rainfall trend comparison line charts
+  *  Native species distribution pie charts
+  * Forest cover before/after restoration scatter plots
+  * Regional forest cover change heatmaps
 
 - **Resilient API Architecture**
-  - Primary: **Groq API** for high-performance inference
-  - Fallback: **IBM WatsonX API** for reliable backup processing
+  * Primary: **Groq API** for high-performance inference
+  * Fallback: **IBM WatsonX API** for reliable backup processing
 
 ## Run the main application
 python prakriti.py
@@ -121,39 +122,32 @@ python prakriti.py --report-only
 ## Output
 
 ### Climate Analysis Complete:
-   - Average Rainfall: 1200 mm/year
-   - Temperature Range: 18°C - 35°C
-   - Identified Risks: Soil erosion, water scarcity
+* Average Rainfall: 1200 mm/year
+* Temperature Range: 18°C - 35°C
+* Identified Risks: Soil erosion, water scarcity
 
 ### Biodiversity Assessment:
-   - Native Species: 45 identified
-   - Endangered Species: 12 need protection
-   - Conservation Opportunities: 8 zones identified
+* Native Species: 45 identified
+* Endangered Species: 12 need protection
+* Conservation Opportunities: 8 zones identified
 
  ### Restoration Plan Generated:
-   - Recommended Species: 15 native varieties
-   - Planting Schedule: Monsoon season optimal
-   - Monitoring Protocol: Quarterly assessments
+* Recommended Species: 15 native varieties
+* Planting Schedule: Monsoon season optimal
+* Monitoring Protocol: Quarterly assessments
 
 
 ## Future Enhancements
   
- * Integrate NASA MODIS NDVI dataset for real vegetation greenness
-
- * Use live climate APIs instead of static inputs
-
- * Add GIS-based maps for restoration zones
-
- * Build a community portal for citizen participation
-
- * Implement blockchain for transparent fund allocation
-
- * Add drone imagery analysis for progress monitoring
+* Integrate NASA MODIS NDVI dataset for real vegetation greenness
+* Use live climate APIs instead of static inputs
+* Add GIS-based maps for restoration zones
+* Build a community portal for citizen participation
+* Implement blockchain for transparent fund allocation
+* Add drone imagery analysis for progress monitoring
 
 ### Contributors
 Kumar Harsh → Lead Developer & Researcher
-
-### Project Prakriti - Harnessing AI for Ecological Restoration and Biodiversity Conservation.
 
 ## Together, let's build a greener future! 🌱
 
