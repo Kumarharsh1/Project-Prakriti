@@ -66,20 +66,20 @@ Project Prakriti is built on a foundation of IBM's open-source technologies and 
 
 ##  Installation & Setup
 
-# Clone the repository
+### Clone the repository
 git clone https://github.com/your-username/project-prakriti.git
 cd project-prakriti
 
-# Create virtual environment
+### Create virtual environment
 python -m venv prakriti-env
 source prakriti-env/bin/activate  # On Windows: prakriti-env\Scripts\activate
 
-# Install dependencies
+### Install dependencies
 pip install -r requirements.txt
 
-# Set up environment variables
+### Set up environment variables
 cp .env.example .env
-# Add your API keys to the .env file
+### Add your API keys to the .env file
 
 ## Key Features*
 
@@ -118,42 +118,42 @@ Restoration Agent combines insights to propose a comprehensive restoration plan
 
 Visualizations display before/after comparisons of biodiversity and forest coverUsage
 
-## Output*
+# Output
 
-# Climate Analysis Complete:
+### Climate Analysis Complete:
    - Average Rainfall: 1200 mm/year
    - Temperature Range: 18°C - 35°C
    - Identified Risks: Soil erosion, water scarcity
 
-# Biodiversity Assessment:
+### Biodiversity Assessment:
    - Native Species: 45 identified
    - Endangered Species: 12 need protection
    - Conservation Opportunities: 8 zones identified
 
- # Restoration Plan Generated:
+ ### Restoration Plan Generated:
    - Recommended Species: 15 native varieties
    - Planting Schedule: Monsoon season optimal
    - Monitoring Protocol: Quarterly assessments
 
 
-  ### Future Enhancements
+# Future Enhancements
   
-# Integrate NASA MODIS NDVI dataset for real vegetation greenness
+ Integrate NASA MODIS NDVI dataset for real vegetation greenness
 
-# Use live climate APIs instead of static inputs
+ Use live climate APIs instead of static inputs
 
-# Add GIS-based maps for restoration zones
+ Add GIS-based maps for restoration zones
 
-# Build a community portal for citizen participation
+ Build a community portal for citizen participation
 
-# Implement blockchain for transparent fund allocation
+ Implement blockchain for transparent fund allocation
 
-# Add drone imagery analysis for progress monitoring
+ Add drone imagery analysis for progress monitoring
 
-## Contributors
+### Contributors
 Kumar Harsh → Lead Developer & Researcher
 
-## Project Prakriti - Harnessing AI for Ecological Restoration and Biodiversity Conservation.
+### Project Prakriti - Harnessing AI for Ecological Restoration and Biodiversity Conservation.
 
-## Together, let's build a greener future! 🌱
+# Together, let's build a greener future! 🌱
 
