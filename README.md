@@ -18,7 +18,7 @@ Project Prakriti is built on a foundation of IBM's open-source technologies and 
 3. **Restoration Planner Agent**: Synthesizes all inputs to generate a comprehensive, actionable restoration plan.
 
 ### High-Level Architecture
-
+<pre>
 ```
           
 +-------------------+     +-----------------------------+
@@ -51,7 +51,7 @@ Project Prakriti is built on a foundation of IBM's open-source technologies and 
                | (JSON / PDF)      |
                +-------------------+
 
-                                     ```
+                                     ``` </pre>
 
 
 ##  Tech Stack
