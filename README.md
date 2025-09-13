@@ -99,26 +99,26 @@ cp .env.example .env
   - Primary: **Groq API** for high-performance inference
   - Fallback: **IBM WatsonX API** for reliable backup processing
 
-# Run the main application
+## Run the main application
 python prakriti.py
 
-# Or run with specific region
+## Or run with specific region
 python prakriti.py --region "Madhya Pradesh"
 
-# Generate report only
+## Generate report only
 python prakriti.py --report-only
 
 ## Select a region (e.g., Madhya Pradesh, Maharashtra, Karnataka)
 
-Climate Agent generates insights on rainfall, temperature, and climate risks
+* Climate Agent generates insights on rainfall, temperature, and climate risks
 
-Biodiversity Agent uses climate analysis to assess species status and threats
+* Biodiversity Agent uses climate analysis to assess species status and threats
 
-Restoration Agent combines insights to propose a comprehensive restoration plan
+* Restoration Agent combines insights to propose a comprehensive restoration plan
 
-Visualizations display before/after comparisons of biodiversity and forest coverUsage
+* Visualizations display before/after comparisons of biodiversity and forest coverUsage
 
-# Output
+## Output
 
 ### Climate Analysis Complete:
    - Average Rainfall: 1200 mm/year
@@ -136,24 +136,24 @@ Visualizations display before/after comparisons of biodiversity and forest cover
    - Monitoring Protocol: Quarterly assessments
 
 
-# Future Enhancements
+## Future Enhancements
   
- Integrate NASA MODIS NDVI dataset for real vegetation greenness
+ * Integrate NASA MODIS NDVI dataset for real vegetation greenness
 
- Use live climate APIs instead of static inputs
+ * Use live climate APIs instead of static inputs
 
- Add GIS-based maps for restoration zones
+ * Add GIS-based maps for restoration zones
 
- Build a community portal for citizen participation
+ * Build a community portal for citizen participation
 
- Implement blockchain for transparent fund allocation
+ * Implement blockchain for transparent fund allocation
 
- Add drone imagery analysis for progress monitoring
+ * Add drone imagery analysis for progress monitoring
 
 ### Contributors
 Kumar Harsh → Lead Developer & Researcher
 
 ### Project Prakriti - Harnessing AI for Ecological Restoration and Biodiversity Conservation.
 
-# Together, let's build a greener future! 🌱
+## Together, let's build a greener future! 🌱
 
