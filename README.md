@@ -1,31 +1,31 @@
-# 🌱 Project Prakriti  
+#  Project Prakriti  
 
 **Project Prakriti** is a multi-agent AI system for **climate analysis, biodiversity assessment, and ecological restoration planning**.  
 It integrates **Groq API** and **IBM WatsonX API** to generate expert insights, and provides rich **visualizations** to track ecological restoration impacts.  
 
 ---
 
-## ✨ Features  
+##  Features  
 
-- 🤖 **Multi-Agent Workflow**  
+-  **Multi-Agent Workflow**  
   - **Climate Agent** → Analyzes rainfall, temperature, and risks.  
   - **Biodiversity Agent** → Evaluates species status, threats, and opportunities.  
   - **Restoration Agent** → Generates restoration plans (native species, planting schedule, monitoring).  
 
-- 📊 **Visualizations**  
+-  **Visualizations**  
   - Bar chart → Biodiversity improvement  
   - Line chart → Rainfall trend comparison  
   - Pie chart → Native species distribution  
   - Scatter plot → Forest cover before vs after restoration  
   - Heatmap → Forest cover change across regions  
 
-- 🔄 **Resilient API Calls**  
+-  **Resilient API Calls**  
   - Primary: **Groq API**  
   - Fallback: **IBM WatsonX API**  
 
 ---
 
-## 🛠️ Tech Stack  
+##  Tech Stack  
 
 - **Language:** Python 3.11+  
 - **APIs:** Groq, IBM WatsonX  
@@ -36,7 +36,7 @@ It integrates **Groq API** and **IBM WatsonX API** to generate expert insights, 
 
 ---
 
-## 🚀 How It Works  
+##  How It Works  
 
 1. **Select a region** (e.g., Madhya Pradesh, Maharashtra, Karnataka).  
 2. **Climate Agent** generates insights on rainfall, temperature, risks.  
@@ -46,7 +46,7 @@ It integrates **Groq API** and **IBM WatsonX API** to generate expert insights, 
 
 ---
 
-## 📸 Sample Visualizations  
+##  Sample Visualizations  
 
 - **Biodiversity Improvement**  
   ![biodiversity_chart](docs/biodiversity.png)  
@@ -56,7 +56,7 @@ It integrates **Groq API** and **IBM WatsonX API** to generate expert insights, 
 
 ---
 
-## 🔑 Setup & Installation  
+##  Working
 
 ```bash
 # Clone repo
@@ -95,10 +95,10 @@ pip install -r requirements.txt
                | (JSON / PDF)      |
                +-------------------+
 
-Run the Project
+## **Run the Project**
 python prakriti.py
 
-Future Enhancements
+##Future Enhancements
 
  Integrate NASA MODIS NDVI dataset for real vegetation greenness.
 
@@ -108,6 +108,6 @@ Future Enhancements
 
  Build a community portal for citizen participation.
 
-Contributors
+##Contributors
 
-Kumar Harsh (Lead Developer & Researcher)
+##Kumar Harsh (Lead Developer & Researcher)
