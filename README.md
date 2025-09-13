@@ -1,4 +1,4 @@
-
+<code>
 +-------------------+     +-----------------------------+
 |                   |     | KNOWLEDGE BASE              |
 |  CLIMATE API      |     | (Vector DB with             |
@@ -28,3 +28,4 @@
                | STRUCTURED PLAN   |
                | (JSON / PDF)      |
                +-------------------+
+</code>
