@@ -19,7 +19,7 @@ Project Prakriti is built on a foundation of IBM's open-source technologies and 
 
 ### High-Level Architecture
 
-'''
+```
           
 +-------------------+     +-----------------------------+
 |                   |     | KNOWLEDGE BASE              |
@@ -51,7 +51,7 @@ Project Prakriti is built on a foundation of IBM's open-source technologies and 
                | (JSON / PDF)      |
                +-------------------+
 
-                                       '''
+                                     ```
 
 
 ##  Tech Stack
