@@ -95,10 +95,10 @@ pip install -r requirements.txt
                | (JSON / PDF)      |
                +-------------------+
 
-## **Run the Project**
+#  Run the Project
 python prakriti.py
 
-##Future Enhancements
+#Future Enhancements
 
  Integrate NASA MODIS NDVI dataset for real vegetation greenness.
 
@@ -108,6 +108,6 @@ python prakriti.py
 
  Build a community portal for citizen participation.
 
-##Contributors
+# Contributors
 
-##Kumar Harsh (Lead Developer & Researcher)
+# Kumar Harsh (Lead Developer & Researcher)
