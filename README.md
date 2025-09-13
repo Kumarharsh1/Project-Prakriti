@@ -4,7 +4,44 @@
 It integrates **Groq API** and **IBM WatsonX API** to generate expert insights, and provides rich **visualizations** to track ecological restoration impacts.  
 
 ---
+##  Working
 
+```bash
+# Clone repo
+git clone https://github.com/your-username/project-prakriti.git
+cd project-prakriti
+
+# Install dependencies
+pip install -r requirements.txt
++-------------------+     +-----------------------------+
+|                   |     | KNOWLEDGE BASE              |
+|  CLIMATE API      |     | (Vector DB with             |
+| (e.g., IMD, NASA) +-----> ISFR Reports, Species Data) |
+|                   |     |                             |
++-------------------+     +-------------+---------------+
+          ^                             ^
+          |                             |
++---------+---------+       +-----------+-----------+
+| Climate Analyst   |       | Biodiversity Strategist|
+| Agent             |       | Agent                 |
+| (IBM Granite-7B + ADK)    | (IBM Granite-7B + ADK) |
++---------+---------+       +-----------+-----------+
+          ^                             ^
+          |                             |
+          +--------------+--------------+
+                         |
+                         v
+               +---------+---------+
+               | Restoration Planner|
+               | Agent             |
+               | (IBM Granite-7B + ADK) |
+               +---------+---------+
+                         |
+                         v
+               +---------+---------+
+               | STRUCTURED PLAN   |
+               | (JSON / PDF)      |
+               +-------------------+
 ##  Features  
 
 -  **Multi-Agent Workflow**  
@@ -56,61 +93,12 @@ It integrates **Groq API** and **IBM WatsonX API** to generate expert insights, 
 
 ---
 
-##  Working
 
-```bash
-# Clone repo
-git clone https://github.com/your-username/project-prakriti.git
-cd project-prakriti
 
-# Install dependencies
-pip install -r requirements.txt
-+-------------------+     +-----------------------------+
-|                   |     | KNOWLEDGE BASE              |
-|  CLIMATE API      |     | (Vector DB with             |
-| (e.g., IMD, NASA) +-----> ISFR Reports, Species Data) |
-|                   |     |                             |
-+-------------------+     +-------------+---------------+
-          ^                             ^
-          |                             |
-+---------+---------+       +-----------+-----------+
-| Climate Analyst   |       | Biodiversity Strategist|
-| Agent             |       | Agent                 |
-| (IBM Granite-7B + ADK)    | (IBM Granite-7B + ADK) |
-+---------+---------+       +-----------+-----------+
-          ^                             ^
-          |                             |
-          +--------------+--------------+
-                         |
-                         v
-               +---------+---------+
-               | Restoration Planner|
-               | Agent             |
-               | (IBM Granite-7B + ADK) |
-               +---------+---------+
-                         |
-                         v
-               +---------+---------+
-               | STRUCTURED PLAN   |
-               | (JSON / PDF)      |
-               +-------------------+
-```bash
-# Run the Project
+##  Run the Project
 python prakriti.py
 
-# Future Enhancements
-Integrate NASA MODIS NDVI dataset for real vegetation greenness.
-Use live climate APIs instead of static inputs.
-Add GIS-based maps for restoration zones.
-Build a community portal for citizen participation.
-
-# Contributors
-Kumar Harsh (Lead Developer & Researcher)
-
-#  Run the Project
-python prakriti.py
-
-#Future Enhancements
+## Future Enhancements
 
  Integrate NASA MODIS NDVI dataset for real vegetation greenness.
 
@@ -120,6 +108,6 @@ python prakriti.py
 
  Build a community portal for citizen participation.
 
-# Contributors
+## Contributors
 
-# Kumar Harsh (Lead Developer & Researcher)
+## Kumar Harsh (Lead Developer & Researcher)
