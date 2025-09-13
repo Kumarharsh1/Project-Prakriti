@@ -77,7 +77,7 @@ Project Prakriti is built on a foundation of IBM's open-source technologies and 
 * IBM_API_KEY=your_ibm_api_key_here
 
 ## **Key Features**
-* **Multi-Agent Workflow**
+ ### **Multi-Agent Workflow**
 * **Climate Analyst Agent** → Analyzes rainfall patterns, temperature trends, and climate risks
 * **Biodiversity Strategist Agent** → Evaluates species status, threats, and conservation opportunities
 * **Restoration Planner Agent** → Generates detailed restoration plans with native species recommendations and monitoring schedules
