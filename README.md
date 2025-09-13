@@ -65,18 +65,14 @@ Project Prakriti is built on a foundation of IBM's open-source technologies and 
   * `json`, `csv` → data processing
 
 ##  **Installation & Setup**
-
-#### **Clone the repository**
-git clone https://github.com/your-username/project-prakriti.git
-cd project-prakriti
-#### **Create virtual environment**
+### **Create virtual environment**
 * python -m venv prakriti-env
 * source prakriti-env/bin/activate  # On Windows: prakriti-env\Scripts\activate
-#### **Install dependencies**
+### **Install dependencies**
 * pip install -r requirements.txt
-#### **Set up environment variables**
+### **Set up environment variables**
 * cp .env.example .env
-#### Add your API keys to the .env file
+### Add your API keys to the .env file
 * GROQ_API_KEY=your_groq_api_key_here
 * IBM_API_KEY=your_ibm_api_key_here
 
@@ -86,14 +82,14 @@ cd project-prakriti
 * **Biodiversity Strategist Agent** → Evaluates species status, threats, and conservation opportunities
 * **Restoration Planner Agent** → Generates detailed restoration plans with native species recommendations and monitoring schedules
 
-**Comprehensive Visualizations**
+## **Comprehensive Visualizations**
 * Biodiversity improvement bar charts
 * Rainfall trend comparison line charts
 *  Native species distribution pie charts
 * Forest cover before/after restoration scatter plots
 * Regional forest cover change heatmaps
 
-**Resilient API Architecture**
+## **Resilient API Architecture**
 * Primary: **Groq API** for high-performance inference
 * Fallback: **IBM WatsonX API** for reliable backup processing
 
