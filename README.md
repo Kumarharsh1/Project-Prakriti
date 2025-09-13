@@ -71,19 +71,16 @@ git clone https://github.com/your-username/project-prakriti.git
 cd project-prakriti
 
 #### **Create virtual environment**
-python -m venv prakriti-env
-source prakriti-env/bin/activate  # On Windows: prakriti-env\Scripts\activate
+* python -m venv prakriti-env
+* source prakriti-env/bin/activate  # On Windows: prakriti-env\Scripts\activate
 
 #### **Install dependencies**
-pip install -r requirements.txt
-
+* pip install -r requirements.txt
 #### **Set up environment variables**
-cp .env.example .env
-
+* cp .env.example .env
 #### Add your API keys to the .env file
 
 ## **Key Features**
-
 * **Multi-Agent Workflow**
 * **Climate Analyst Agent** → Analyzes rainfall patterns, temperature trends, and climate risks
 * **Biodiversity Strategist Agent** → Evaluates species status, threats, and conservation opportunities
